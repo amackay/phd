@@ -1,0 +1,1539 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML LANG="EN-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<STYLE TYPE="text/css">
+<!--
+img { margin-bottom: -4px }
+.r { font-family: "Arial Narrow";
+     font-size: x-small;
+   }
+.i { font-family: "Arial Narrow";
+     font-size: x-small;
+     color: gray;
+   }
+-->
+</STYLE>
+<STYLE TYPE="text/css">
+<!--
+  .setvar { color: red; }
+  .wff { color: blue; }
+  .class { color: #C3C; }
+  .symvar { border-bottom:1px dotted;color:#C3C}
+  .typecode { color: gray }
+  .hidden { color: gray }
+  @font-face {
+    font-family: XITSMath-Regular;
+    src: url(xits-math.woff);
+  }
+  .math { font-family: XITSMath-Regular }
+-->
+</STYLE>
+<LINK href="mmset.css" title="mmset"
+    rel="stylesheet" type="text/css">
+<LINK href="mmsetalt.css" title="mmsetalt"
+    rel="alternate stylesheet" type="text/css">
+<TITLE>mmdefinitions - Metamath Proof Explorer</TITLE>
+<LINK REL="shortcut icon" HREF="favicon.ico" TYPE="image/x-icon">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+  <TR>
+    <TD ALIGN=LEFT VALIGN=TOP WIDTH="25%"><A HREF=
+    "mmset.html"><IMG SRC="mm.gif"
+      BORDER=0
+      ALT="MPE Home"
+      TITLE="MPE Home"
+      HEIGHT=32 WIDTH=32 ALIGN=TOP STYLE="margin-bottom:0px"></A>
+    </TD>
+    <TD ALIGN=CENTER COLSPAN=2 VALIGN=TOP><FONT SIZE="+3" COLOR="#006633"><B>
+Metamath Proof Explorer
+      </B></FONT></TD>
+      <TD ALIGN=RIGHT VALIGN=TOP
+       ><FONT FACE=sans-serif SIZE=-2>
+
+This is the Unicode version.<BR>
+<A HREF="../mpegif/mmdefinitions.html">Change to GIF version</A>
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<CENTER>
+<TABLE BORDER CELLSPACING=0 BGCOLOR="#EEFFFA"
+SUMMARY="List of syntax, axioms and definitions">
+<CAPTION><B>List of Syntax, Axioms (<FONT COLOR="#006633">ax-</FONT>) and
+Definitions (<FONT COLOR="#006633">df-</FONT>)</B></CAPTION><TR
+ALIGN=LEFT><TD><B>
+Ref</B></TD><TD><B>Expression (see link for any distinct variable requirements)
+</B></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wn.html">wn</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#FB0000">1</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN> &not; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wi.html">wi</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#FA0200">2</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="a1i.html">a1i</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F90500">3</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN></SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="mpd.html">mpd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F80700">4</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="syl.html">syl</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F70A00">5</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="syld.html">syld</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F60F00">6</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="mp2d.html">mp2d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F41600">7</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="embantd.html">embantd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F21D00">8</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="com13.html">com13</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F02400">9</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="pm2.21d.html">pm2.21d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#EE2B00">10</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; &not; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wb.html">wb</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#EA3100">11</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="imbitrrdi.html">imbitrrdi</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E73700">12</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="mpbird.html">mpbird</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E33D00">13</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="sylibrd.html">sylibrd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E04300">14</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="bitri.html">bitri</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#DC4800">15</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="bitr3d.html">bitr3d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#D84C00">16</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="bitrdi.html">bitrdi</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#D35000">17</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="mtbir.html">mtbir</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#CF5400">18</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN> &not; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN> &not; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="imbi1d.html">imbi1d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#CB5800">19</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>) &harr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="imbi12d.html">imbi12d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#C65C00">20</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>) &harr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wa.html">wa</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#C06000">21</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="ex.html">ex</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#BB6400">22</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="ancoms.html">ancoms</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#B56900">23</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="simpr.html">simpr</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#B06C00">24</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="simpld.html">simpld</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#AB7000">25</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="simprd.html">simprd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#A57300">26</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="jca.html">jca</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#A07600">27</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="ancld.html">ancld</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#9B7900">28</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="sylanbrc.html">sylanbrc</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#957B00">29</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN> &harr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="syl2an.html">syl2an</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#8F7D00">30</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D70F;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D70F;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="ad2antrr.html">ad2antrr</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#897F00">31</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>) &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="ad2antlr.html">ad2antlr</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#838100">32</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>) &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="simpll.html">simpll</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#7E8300">33</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>) &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="simplr.html">simplr</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#7A8400">34</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>) &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wo.html">wo</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#768500">35</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &or; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="jaob.html">jaob</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#728600">36</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &or; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>) &harr; ((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>) &and; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cv.html">cv</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#6F8700">37</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN><SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wceq.html">wceq</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#6A8800">38</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wcel.html">wcel</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#648900">39</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="eqtrd.html">eqtrd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#5F8A00">40</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="eqtr3d.html">eqtr3d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#5A8C00">41</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="eqtr4d.html">eqtr4d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#548D00">42</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="3eqtr4d.html">3eqtr4d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#4F8D00">43</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D437;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D437;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="eqeltrd.html">eqeltrd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#498E00">44</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="eqeltrrd.html">eqeltrrd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#438F00">45</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wne.html">wne</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#3E8F00">46</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &ne; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="df-ne.html">df-ne</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#379000">47</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &ne; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &harr; &not; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="necon2ad.html">necon2ad</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#319100">48</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &rarr; &not; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &ne; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="necon2bd.html">necon2bd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#2A9100">49</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &ne; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &rarr; &not; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="neeq2d.html">neeq2d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#239200">50</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> &ne; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &harr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> &ne; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wnel.html">wnel</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#1D9300">51</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &notin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nelir.html">nelir</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#169305">52</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN> &not; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN></SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &notin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wral.html">wral</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#10930A">53</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN>&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="rgen.html">rgen</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#09930F">54</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wrex.html">wrex</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#029313">55</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN>&exist;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="ralnex.html">ralnex</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#00931A">56</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &not; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; &not; &exist;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nrex.html">nrex</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#009223">57</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &rarr; &not; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN> &not; &exist;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="r19.26.html">r19.26</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#00922C">58</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>) &harr; (&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; &forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="ralrimdva.html">ralrimdva</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#009134">59</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>) &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &rarr; &forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="ralbidva.html">ralbidva</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#00913D">60</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>) &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; &forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="ralbidv.html">ralbidv</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#009144">61</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN> &harr; &forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="cbvralvw.html">cbvralvw</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#00914B">62</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> = <SPAN CLASS=setvar
+STYLE="color:red">&#x1D466;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; &forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D466;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="rexcom.html">rexcom</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#009153">63</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(&exist;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &exist;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D466;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; &exist;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D466;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &exist;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="ceqsralv.html">ceqsralv</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#00915A">64</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &rarr; (&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> (<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>) &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="rspcv.html">rspcv</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#009061">65</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &rarr; (&forall;<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> &isin; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="wbr.html">wbr</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#009068">66</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">wff </SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D445;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="breq1.html">breq1</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008F70">67</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D445;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> &harr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D445;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="breq2.html">breq2</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008F77">68</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D445;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &harr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D445;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cfv.html">cfv</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008F7E">69</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN>&lsquo;<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="co.html">co</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008E86">70</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="oveq1.html">oveq1</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008D8F">71</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="oveq2.html">oveq2</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008D97">72</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="oveq1d.html">oveq1d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#008C9F">73</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="oveq2d.html">oveq2d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#008BA9">74</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D439;</SPAN><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cc.html">cc</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#0089B5">75</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>&#8450;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cr.html">cr</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#0088C0">76</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>&#8477;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cc0.html">cc0</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#0086CC">77</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>0</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="c1.html">c1</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#0085D8">78</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>1</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="caddc.html">caddc</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#0083E1">79</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN> +</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cmul.html">cmul</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#0182E9">80</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN> &middot;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="clt.html">clt</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#0181F1">81</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN> &lt;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cle.html">cle</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#027FF9">82</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN> &le;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="leloe.html">leloe</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#087EFF">83</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8477; &and; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8477;) &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &le; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &harr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &lt; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &or; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cdiv.html">cdiv</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#177CFF">84</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN> /</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="divcan1d.html">divcan1d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#267AFF">85</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &ne; 0)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>) &middot; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>) = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="divcan3d.html">divcan3d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#3579FF">86</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &ne; 0)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &middot; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>) / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>) = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="divcan7d.html">divcan7d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#4477FF">87</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &ne; 0)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> &ne; 0)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>) / (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="divdiv1d.html">divdiv1d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#4E75FF">88</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &ne; 0)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN> &ne; 0)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>) / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &middot; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D436;</SPAN>)))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="ltp1d.html">ltp1d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#5672FF">89</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8477;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &lt; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> + 1))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cn.html">cn</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#5F70FF">90</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>&#8469;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nnre.html">nnre</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#676EFF">91</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469; &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8477;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nncn.html">nncn</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#6F6CFF">92</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469; &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="peano2nn.html">peano2nn</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#756AFF">93</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469; &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> + 1) &isin; &#8469;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nncnd.html">nncnd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#7B67FF">94</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nnind.html">nnind</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#8165FF">95</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> = 1 &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> = <SPAN CLASS=setvar
+STYLE="color:red">&#x1D466;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> = (<SPAN CLASS=setvar
+STYLE="color:red">&#x1D466;</SPAN> + 1) &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=setvar
+STYLE="color:red">&#x1D466;</SPAN> &isin; &#8469; &rarr; (<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469; &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D70F;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="nnnlt1.html">nnnlt1</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#8763FF">96</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469; &rarr; &not; <SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> &lt; 1)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nnne0.html">nnne0</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#8E5FFF">97</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469; &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &ne; 0)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="nnne0d.html">nnne0d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#955AFF">98</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &ne; 0)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="c2.html">c2</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#9C56FF">99</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>2</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="2cnd.html">2cnd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#A351FF">100</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; 2 &isin; &#8450;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="2ne0.html">2ne0</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#A94DFF">101</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>2 &ne; 0</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cz.html">cz</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#AD48FF">102</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>&#8484;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="zcn.html">zcn</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#B143FF">103</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D441;</SPAN> &isin; &#8484; &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D441;</SPAN> &isin; &#8450;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="elnnz.html">elnnz</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#B53FFF">104</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D441;</SPAN> &isin; &#8469; &harr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D441;</SPAN> &isin; &#8484; &and; 0 &lt; <SPAN
+CLASS=class STYLE="color:#C3C">&#x1D441;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nnzd.html">nnzd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#B83AFF">105</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8484;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="nnleltp1.html">nnleltp1</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#BC35FE">106</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469; &and; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8469;) &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &le; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &harr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &lt; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> + 1)))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="zcnd.html">zcnd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#C030FC">107</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8484;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cq.html">cq</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#C42AFB">108</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>&#8474;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="elq.html">elq</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#C825FA">109</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8474; &harr; &exist;<SPAN
+CLASS=setvar STYLE="color:red">&#x1D465;</SPAN> &isin; &#8484; &exist;<SPAN
+CLASS=setvar STYLE="color:red">&#x1D466;</SPAN> &isin; &#8469; <SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> = (<SPAN CLASS=setvar
+STYLE="color:red">&#x1D465;</SPAN> / <SPAN CLASS=setvar
+STYLE="color:red">&#x1D466;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="crp.html">crp</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#CC20F8">110</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class
+</SPAN>&#8477;<SUP>+</SUP></SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nnrp.html">nnrp</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#CE1CF5">111</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469; &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin;
+&#8477;<SUP>+</SUP>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="rphalflt.html">rphalflt</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#D018F2">112</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8477;<SUP>+</SUP> &rarr; (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> / 2) &lt; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nnrpd.html">nnrpd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D215EF">113</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin;
+&#8477;<SUP>+</SUP>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="rpgt0d.html">rpgt0d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#D411EC">114</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin;
+&#8477;<SUP>+</SUP>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; 0 &lt; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="rphalfcld.html">rphalfcld</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#D60DE9">115</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin;
+&#8477;<SUP>+</SUP>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / 2) &isin;
+&#8477;<SUP>+</SUP>)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="cexp.html">cexp</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D70AE6">116</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>&uarr;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="zsqcl.html">zsqcl</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D906E3">117</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8484; &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) &isin; &#8484;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="sqvald.html">sqvald</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#DB03E0">118</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &middot; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="sqcld.html">sqcld</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#DD00DD">119</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) &isin; &#8450;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="sqdivd.html">sqdivd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#DF00D2">120</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8450;)</SPAN><SPAN
+CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &ne; 0)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)&uarr;2) = ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="zesq.html">zesq</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E200C7">121</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D441;</SPAN> &isin; &#8484; &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D441;</SPAN> / 2) &isin; &#8484; &harr; ((<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D441;</SPAN>&uarr;2) / 2) &isin;
+&#8484;))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="nnesq.html">nnesq</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E500BC">122</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D441;</SPAN> &isin; &#8469; &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D441;</SPAN> / 2) &isin; &#8469; &harr; ((<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D441;</SPAN>&uarr;2) / 2) &isin;
+&#8469;))</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="nnsqcld.html">nnsqcld</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E700B1">123</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8469;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) &isin; &#8469;)</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A HREF="csqrt.html">csqrt</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E900A7">124</SPAN></TD><TD><SPAN CLASS=math><SPAN
+CLASS=typecode STYLE="color:gray">class </SPAN>&radic;</SPAN></TD></TR>
+
+<TR BGCOLOR="#EEFFFA" ALIGN=LEFT><TD><A
+HREF="sqsqrtd.html">sqsqrtd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#EB009E">125</SPAN></TD><TD><SPAN CLASS=math><SPAN CLASS=hidden
+STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN>&nbsp;&nbsp;&nbsp;
+<FONT FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((&radic;&lsquo;<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>)&uarr;2) = <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>)</SPAN></TD></TR>
+</TABLE></CENTER>
+<TABLE BORDER=0 WIDTH="100%">
+<TR><TD WIDTH="25%">&nbsp;</TD>
+<TD ALIGN=CENTER VALIGN=BOTTOM>
+<FONT SIZE=-2 FACE=sans-serif>
+Copyright terms:
+<A HREF="../copyright.html#pd">Public domain</A>
+</FONT></TD><TD ALIGN=RIGHT VALIGN=BOTTOM WIDTH="25%">
+<FONT SIZE=-2 FACE=sans-serif>
+<A HREF="http://validator.w3.org/check?uri=referer">
+W3C validator</A>
+</FONT></TD></TR></TABLE>
+</BODY></HTML>
