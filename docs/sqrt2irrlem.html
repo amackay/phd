@@ -1,0 +1,596 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML LANG="EN-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<STYLE TYPE="text/css">
+<!--
+img { margin-bottom: -4px }
+.r { font-family: "Arial Narrow";
+     font-size: x-small;
+   }
+.i { font-family: "Arial Narrow";
+     font-size: x-small;
+     color: gray;
+   }
+-->
+</STYLE>
+<STYLE TYPE="text/css">
+<!--
+  .setvar { color: red; }
+  .wff { color: blue; }
+  .class { color: #C3C; }
+  .symvar { border-bottom:1px dotted;color:#C3C}
+  .typecode { color: gray }
+  .hidden { color: gray }
+  @font-face {
+    font-family: XITSMath-Regular;
+    src: url(xits-math.woff);
+  }
+  .math { font-family: XITSMath-Regular }
+-->
+</STYLE>
+<LINK href="mmset.css" title="mmset"
+    rel="stylesheet" type="text/css">
+<LINK href="mmsetalt.css" title="mmsetalt"
+    rel="alternate stylesheet" type="text/css">
+<TITLE>sqrt2irrlem - Metamath Proof Explorer</TITLE>
+<LINK REL="shortcut icon" HREF="favicon.ico" TYPE="image/x-icon">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+  <TR>
+    <TD ALIGN=LEFT VALIGN=TOP WIDTH="25%"><A HREF=
+    "mmset.html"><IMG SRC="mm.gif"
+      BORDER=0
+      ALT="MPE Home"
+      TITLE="MPE Home"
+      HEIGHT=32 WIDTH=32 ALIGN=TOP STYLE="margin-bottom:0px"></A>
+    </TD>
+    <TD ALIGN=CENTER COLSPAN=2 VALIGN=TOP><FONT SIZE="+3" COLOR="#006633"><B>
+Metamath Proof Explorer
+      </B></FONT></TD>
+    <TD ALIGN=RIGHT VALIGN=TOP WIDTH="25%">
+      <FONT SIZE=-1 FACE=sans-serif>
+      <A HREF="sqsqrtd.html">
+      &lt; Previous</A>&nbsp;&nbsp;
+      <A HREF="sqrt2irr.html">Next &gt;</A>
+      </FONT><FONT FACE=sans-serif SIZE=-2>
+      <BR><A HREF="mmtheorems2.html#sqrt2irrlem">Nearby theorems</A>
+      </FONT>
+    </TD>
+  </TR>
+  <TR>
+    <TD COLSPAN=2 ALIGN=LEFT VALIGN=TOP><FONT SIZE=-2
+      FACE=sans-serif>
+      <A HREF="../mm.html">Mirrors</A>&nbsp; &gt;
+      &nbsp;<A HREF="../index.html">Home</A>&nbsp; &gt;
+      &nbsp;<A HREF="mmset.html">MPE Home</A>&nbsp; &gt;
+      &nbsp;<A HREF="mmtheorems.html">Th. List</A>&nbsp; &gt;
+      &nbsp;sqrt2irrlem
+      </FONT>
+    </TD>
+    <TD COLSPAN=2 ALIGN=RIGHT VALIGN=TOP>
+      <FONT SIZE=-2 FACE=sans-serif>
+<A HREF="http://metamath.tirix.org/mpests/sqrt2irrlem.html">Structured
+version</A>&nbsp;&nbsp; <A
+HREF="https://expln.github.io/metamath/asrt/sqrt2irrlem.html">Visualization
+version</A>&nbsp;&nbsp; 
+      <A HREF="../mpegif/sqrt2irrlem.html">GIF version</A>
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<CENTER><B><FONT SIZE="+1">Theorem <FONT
+COLOR="#006633">sqrt2irrlem</FONT></FONT></B>&nbsp;<SPAN CLASS=r
+STYLE="color:#EC0095">126</SPAN></CENTER>
+<CENTER><TABLE><TR><TD ALIGN=LEFT><B>Description: </B>Lemma for <A
+HREF="sqrt2irr.html">sqrt2irr</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#ED008C">127</SPAN>.  This is the core of the proof: if
+       <SPAN CLASS=math><SPAN CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> /
+<SPAN CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN> = &radic;(2)</SPAN>, then
+<SPAN CLASS=math><SPAN CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN></SPAN>
+and <SPAN CLASS=math><SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN></SPAN> are even, so <SPAN CLASS=math><SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> / 2</SPAN> and
+       <SPAN CLASS=math><SPAN CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN> /
+2</SPAN> are smaller representatives, which is absurd by the method of
+       infinite descent (here implemented by strong induction).  This is
+       Metamath 100 proof #1.  (Contributed by NM, 20-Aug-2001.)  (Revised by
+       Mario Carneiro, 12-Sep-2015.)  (Proof shortened by JV,
+4-Jan-2022.)</TD></TR></TABLE></CENTER>
+
+<CENTER><TABLE BORDER CELLSPACING=0 BGCOLOR="#EEFFFA"
+SUMMARY="Hypotheses">
+<CAPTION><B>Hypotheses</B></CAPTION>
+<TR><TH>Ref
+</TH><TH>Expression</TH></TR>
+<TR ALIGN=LEFT><TD>sqrt2irrlem.1</TD><TD>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8484;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>sqrt2irrlem.2</TD><TD>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8469;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>sqrt2irrlem.3</TD><TD>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (&radic;&lsquo;2) = (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>))</SPAN></TD></TR>
+</TABLE></CENTER>
+<CENTER><TABLE BORDER CELLSPACING=0 BGCOLOR="#EEFFFA"
+SUMMARY="Assertion">
+<CAPTION><B>Assertion</B></CAPTION>
+<TR><TH>Ref
+</TH><TH>Expression</TH></TR>
+<TR ALIGN=LEFT><TD><FONT COLOR="#006633"><B>sqrt2irrlem</B></FONT></TD><TD>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / 2) &isin; &#8484; &and; (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN> / 2) &isin;
+&#8469;))</SPAN></TD></TR>
+</TABLE></CENTER>
+
+
+<HR NOSHADE SIZE=1>
+<CENTER><TABLE BORDER CELLSPACING=0 BGCOLOR="#EEFFFA"
+SUMMARY="Proof of theorem">
+<CAPTION><B>Proof of Theorem <FONT
+   COLOR="#006633">sqrt2irrlem</FONT></B></CAPTION>
+<TR><TH>Step</TH><TH>Hyp</TH><TH>Ref
+</TH><TH>Expression</TH></TR>
+<TR ALIGN=LEFT><TD>1</TD><TD>&nbsp;</TD><TD><A HREF="2cnd.html"
+TITLE="The number 2 is a complex number, deduction form. (Contributed by David A. Wheeler,...">2cnd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#A351FF">100</SPAN></TD><TD><A NAME="1"></A>
+<SPAN CLASS=i>. . . . . . . . . . . 12</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; 2 &isin;
+&#8450;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>2</TD><TD><A HREF="#1">1</A></TD><TD><A HREF="sqsqrtd.html"
+TITLE="Square root theorem. Theorem I.35 of [Apostol] p. 29. (Contributed by Mario...">sqsqrtd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#EB009E">125</SPAN></TD><TD><A NAME="2"></A>
+<SPAN CLASS=i>. . . . . . . . . . 11</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((&radic;&lsquo;2)&uarr;2)
+= 2)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>3</TD><TD>&nbsp;</TD><TD>sqrt2irrlem.3</TD><TD><A
+NAME="3"></A>
+<SPAN CLASS=i>. . . . . . . . . . . 12</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (&radic;&lsquo;2) = (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>4</TD><TD><A HREF="#3">3</A></TD><TD><A HREF="oveq1d.html"
+TITLE="Equality deduction for operation value. (Contributed by NM, 13-Mar-1995.)">oveq1d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008C9F">73</SPAN></TD><TD><A NAME="4"></A>
+<SPAN CLASS=i>. . . . . . . . . . 11</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((&radic;&lsquo;2)&uarr;2)
+= ((<SPAN CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)&uarr;2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>5</TD><TD><A HREF="#2">2</A>, <A HREF="#4">4</A></TD><TD><A
+HREF="eqtr3d.html"
+TITLE="An equality transitivity equality deduction. (Contributed by NM, 18-Jul-1995.)">eqtr3d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#5A8C00">41</SPAN></TD><TD><A NAME="5"></A>
+<SPAN CLASS=i>. . . . . . . . . 10</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; 2 = ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)&uarr;2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>6</TD><TD>&nbsp;</TD><TD>sqrt2irrlem.1</TD><TD><A
+NAME="6"></A>
+<SPAN CLASS=i>. . . . . . . . . . . 12</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8484;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>7</TD><TD><A HREF="#6">6</A></TD><TD><A HREF="zcnd.html"
+TITLE="An integer is a complex number. (Contributed by Mario Carneiro, 28-May-2016.)">zcnd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#C030FC">107</SPAN></TD><TD><A NAME="7"></A>
+<SPAN CLASS=i>. . . . . . . . . . 11</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8450;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>8</TD><TD>&nbsp;</TD><TD>sqrt2irrlem.2</TD><TD><A
+NAME="8"></A>
+<SPAN CLASS=i>. . . . . . . . . . . 12</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8469;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>9</TD><TD><A HREF="#8">8</A></TD><TD><A HREF="nncnd.html"
+TITLE="A positive integer is a complex number. (Contributed by Mario Carneiro, 27-May-2016.)">nncnd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#7B67FF">94</SPAN></TD><TD><A NAME="9"></A>
+<SPAN CLASS=i>. . . . . . . . . . 11</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8450;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>10</TD><TD><A HREF="#8">8</A></TD><TD><A HREF="nnne0d.html"
+TITLE="A positive integer is nonzero. (Contributed by Mario Carneiro, 27-May-2016.)">nnne0d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#955AFF">98</SPAN></TD><TD><A NAME="10"></A>
+<SPAN CLASS=i>. . . . . . . . . . 11</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> &ne; 0)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>11</TD><TD><A HREF="#7">7</A>, <A HREF="#9">9</A>, <A
+HREF="#10">10</A></TD><TD><A HREF="sqdivd.html"
+TITLE="Distribution of squaring over division. (Contributed by Mario Carneiro, 28-May-2016.)">sqdivd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#DF00D2">120</SPAN></TD><TD><A NAME="11"></A>
+<SPAN CLASS=i>. . . . . . . . . 10</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / <SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>)&uarr;2) = ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>12</TD><TD><A HREF="#5">5</A>, <A
+HREF="#11">11</A></TD><TD><A HREF="eqtrd.html"
+TITLE="An equality transitivity deduction. (Contributed by NM, 21-Jun-1993.)">eqtrd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#5F8A00">40</SPAN></TD><TD><A NAME="12"></A>
+<SPAN CLASS=i>. . . . . . . . 9</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; 2 = ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>13</TD><TD><A HREF="#12">12</A></TD><TD><A
+HREF="oveq1d.html"
+TITLE="Equality deduction for operation value. (Contributed by NM, 13-Mar-1995.)">oveq1d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008C9F">73</SPAN></TD><TD><A NAME="13"></A>
+<SPAN CLASS=i>. . . . . . . 8</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (2 &middot; (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)) = (((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)) &middot; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>14</TD><TD><A HREF="#7">7</A></TD><TD><A HREF="sqcld.html"
+TITLE="Closure of square. (Contributed by Mario Carneiro, 28-May-2016.)">sqcld</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#DD00DD">119</SPAN></TD><TD><A NAME="14"></A>
+<SPAN CLASS=i>. . . . . . . . 9</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) &isin; &#8450;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>15</TD><TD><A HREF="#8">8</A></TD><TD><A HREF="nnsqcld.html"
+TITLE="The naturals are closed under squaring. (Contributed by Mario Carneiro, 28-May-2016.)">nnsqcld</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E700B1">123</SPAN></TD><TD><A NAME="15"></A>
+<SPAN CLASS=i>. . . . . . . . . 10</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) &isin; &#8469;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>16</TD><TD><A HREF="#15">15</A></TD><TD><A HREF="nncnd.html"
+TITLE="A positive integer is a complex number. (Contributed by Mario Carneiro, 27-May-2016.)">nncnd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#7B67FF">94</SPAN></TD><TD><A NAME="16"></A>
+<SPAN CLASS=i>. . . . . . . . 9</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) &isin; &#8450;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>17</TD><TD><A HREF="#15">15</A></TD><TD><A
+HREF="nnne0d.html"
+TITLE="A positive integer is nonzero. (Contributed by Mario Carneiro, 27-May-2016.)">nnne0d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#955AFF">98</SPAN></TD><TD><A NAME="17"></A>
+<SPAN CLASS=i>. . . . . . . . 9</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) &ne; 0)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>18</TD><TD><A HREF="#14">14</A>, <A HREF="#16">16</A>, <A
+HREF="#17">17</A></TD><TD><A HREF="divcan1d.html"
+TITLE="A cancellation law for division. (Contributed by Mario Carneiro, 27-May-2016.)">divcan1d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#267AFF">85</SPAN></TD><TD><A NAME="18"></A>
+<SPAN CLASS=i>. . . . . . . 8</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)) &middot; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>19</TD><TD><A HREF="#13">13</A>, <A
+HREF="#18">18</A></TD><TD><A HREF="eqtrd.html"
+TITLE="An equality transitivity deduction. (Contributed by NM, 21-Jun-1993.)">eqtrd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#5F8A00">40</SPAN></TD><TD><A NAME="19"></A>
+<SPAN CLASS=i>. . . . . . 7</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (2 &middot; (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>20</TD><TD><A HREF="#19">19</A></TD><TD><A
+HREF="oveq1d.html"
+TITLE="Equality deduction for operation value. (Contributed by NM, 13-Mar-1995.)">oveq1d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008C9F">73</SPAN></TD><TD><A NAME="20"></A>
+<SPAN CLASS=i>. . . . . 6</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((2 &middot; (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)) / 2) = ((<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / 2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>21</TD><TD>&nbsp;</TD><TD><A HREF="2ne0.html"
+TITLE="The number 2 is nonzero. (Contributed by NM, 9-Nov-2007.)">2ne0</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#A94DFF">101</SPAN></TD><TD><A NAME="21"></A>
+<SPAN CLASS=i>. . . . . . . 8</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>2 &ne;
+0</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>22</TD><TD><A HREF="#21">21</A></TD><TD><A HREF="a1i.html"
+TITLE="Inference introducing an antecedent. Inference associated with ax-1 ~...">a1i</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F90500">3</SPAN></TD><TD><A NAME="22"></A>
+<SPAN CLASS=i>. . . . . . 7</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; 2 &ne; 0)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>23</TD><TD><A HREF="#16">16</A>, <A HREF="#1">1</A>, <A
+HREF="#22">22</A></TD><TD><A HREF="divcan3d.html"
+TITLE="A cancellation law for division. (Contributed by Mario Carneiro, 27-May-2016.)">divcan3d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#3579FF">86</SPAN></TD><TD><A NAME="23"></A>
+<SPAN CLASS=i>. . . . . 6</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((2 &middot; (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2)) / 2) = (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>24</TD><TD><A HREF="#20">20</A>, <A
+HREF="#23">23</A></TD><TD><A HREF="eqtr3d.html"
+TITLE="An equality transitivity equality deduction. (Contributed by NM, 18-Jul-1995.)">eqtr3d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#5A8C00">41</SPAN></TD><TD><A NAME="24"></A>
+<SPAN CLASS=i>. . . . 5</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / 2) = (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>25</TD><TD><A HREF="#24">24</A>, <A
+HREF="#15">15</A></TD><TD><A HREF="eqeltrd.html"
+TITLE="Substitution of equal classes into membership relation, deduction form. (Contributed...">eqeltrd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#498E00">44</SPAN></TD><TD><A NAME="25"></A>
+<SPAN CLASS=i>. . . 4</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / 2) &isin;
+&#8469;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>26</TD><TD><A HREF="#25">25</A></TD><TD><A HREF="nnzd.html"
+TITLE="A positive integer is an integer. (Contributed by Mario Carneiro, 28-May-2016.)">nnzd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#B83AFF">105</SPAN></TD><TD><A NAME="26"></A>
+<SPAN CLASS=i>. . 3</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / 2) &isin;
+&#8484;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>27</TD><TD>&nbsp;</TD><TD><A HREF="zesq.html"
+TITLE="An integer is even iff its square is even. (Contributed by Mario Carneiro,...">zesq</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E200C7">121</SPAN></TD><TD><A NAME="27"></A>
+<SPAN CLASS=i>. . . 4</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> &isin; &#8484; &rarr; ((<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> / 2) &isin; &#8484; &harr;
+((<SPAN CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / 2) &isin;
+&#8484;))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>28</TD><TD><A HREF="#6">6</A>, <A
+HREF="#27">27</A></TD><TD><A HREF="syl.html"
+TITLE="An inference version of the transitive laws for implication imim2 ~...">syl</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F70A00">5</SPAN></TD><TD><A NAME="28"></A>
+<SPAN CLASS=i>. . 3</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / 2) &isin; &#8484; &harr; ((<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / 2) &isin;
+&#8484;))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>29</TD><TD><A HREF="#26">26</A>, <A
+HREF="#28">28</A></TD><TD><A HREF="mpbird.html"
+TITLE="A deduction from a biconditional, related to modus ponens. (Contributed by NM,...">mpbird</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E33D00">13</SPAN></TD><TD><A NAME="29"></A>
+<SPAN CLASS=i>. 2</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / 2) &isin; &#8484;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>30</TD><TD><A HREF="#1">1</A></TD><TD><A HREF="sqvald.html"
+TITLE="Value of square. Inference version. (Contributed by Mario Carneiro, 28-May-2016.)">sqvald</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#DB03E0">118</SPAN></TD><TD><A NAME="30"></A>
+<SPAN CLASS=i>. . . . . . . 8</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (2&uarr;2) = (2 &middot;
+2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>31</TD><TD><A HREF="#30">30</A></TD><TD><A
+HREF="oveq2d.html"
+TITLE="Equality deduction for operation value. (Contributed by NM, 13-Mar-1995.)">oveq2d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008BA9">74</SPAN></TD><TD><A NAME="31"></A>
+<SPAN CLASS=i>. . . . . . 7</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / (2&uarr;2)) = ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / (2 &middot; 2)))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>32</TD><TD><A HREF="#7">7</A>, <A HREF="#1">1</A>, <A
+HREF="#22">22</A></TD><TD><A HREF="sqdivd.html"
+TITLE="Distribution of squaring over division. (Contributed by Mario Carneiro, 28-May-2016.)">sqdivd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#DF00D2">120</SPAN></TD><TD><A NAME="32"></A>
+<SPAN CLASS=i>. . . . . . 7</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / 2)&uarr;2) = ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / (2&uarr;2)))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>33</TD><TD><A HREF="#14">14</A>, <A HREF="#1">1</A>, <A
+HREF="#1">1</A>, <A HREF="#22">22</A>, <A HREF="#22">22</A></TD><TD><A
+HREF="divdiv1d.html"
+TITLE="Division into a fraction. (Contributed by Mario Carneiro, 27-May-2016.)">divdiv1d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#4E75FF">88</SPAN></TD><TD><A NAME="33"></A>
+<SPAN CLASS=i>. . . . . . 7</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / 2) / 2) = ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / (2 &middot; 2)))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>34</TD><TD><A HREF="#31">31</A>, <A HREF="#32">32</A>, <A
+HREF="#33">33</A></TD><TD><A HREF="3eqtr4d.html"
+TITLE="A deduction from three chained equalities. (Contributed by NM, 4-Aug-1995.) (Proof...">3eqtr4d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#4F8D00">43</SPAN></TD><TD><A NAME="34"></A>
+<SPAN CLASS=i>. . . . . 6</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / 2)&uarr;2) = (((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / 2) / 2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>35</TD><TD><A HREF="#24">24</A></TD><TD><A
+HREF="oveq1d.html"
+TITLE="Equality deduction for operation value. (Contributed by NM, 13-Mar-1995.)">oveq1d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#008C9F">73</SPAN></TD><TD><A NAME="35"></A>
+<SPAN CLASS=i>. . . . . 6</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN>&uarr;2) / 2) / 2) = ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>36</TD><TD><A HREF="#34">34</A>, <A
+HREF="#35">35</A></TD><TD><A HREF="eqtrd.html"
+TITLE="An equality transitivity deduction. (Contributed by NM, 21-Jun-1993.)">eqtrd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#5F8A00">40</SPAN></TD><TD><A NAME="36"></A>
+<SPAN CLASS=i>. . . . 5</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / 2)&uarr;2) = ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>37</TD><TD>&nbsp;</TD><TD><A HREF="zsqcl.html"
+TITLE="Integers are closed under squaring. (Contributed by Scott Fenton, 18-Apr-2014.)...">zsqcl</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D906E3">117</SPAN></TD><TD><A NAME="37"></A>
+<SPAN CLASS=i>. . . . . 6</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> / 2) &isin; &#8484; &rarr;
+((<SPAN CLASS=class STYLE="color:#C3C">&#x1D434;</SPAN> / 2)&uarr;2) &isin;
+&#8484;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>38</TD><TD><A HREF="#29">29</A>, <A
+HREF="#37">37</A></TD><TD><A HREF="syl.html"
+TITLE="An inference version of the transitive laws for implication imim2 ~...">syl</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F70A00">5</SPAN></TD><TD><A NAME="38"></A>
+<SPAN CLASS=i>. . . . 5</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / 2)&uarr;2) &isin;
+&#8484;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>39</TD><TD><A HREF="#36">36</A>, <A
+HREF="#38">38</A></TD><TD><A HREF="eqeltrrd.html"
+TITLE="Deduction that substitutes equal classes into membership. (Contributed by NM,...">eqeltrrd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#438F00">45</SPAN></TD><TD><A NAME="39"></A>
+<SPAN CLASS=i>. . . 4</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2) &isin;
+&#8484;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>40</TD><TD><A HREF="#15">15</A></TD><TD><A HREF="nnrpd.html"
+TITLE="A positive integer is a positive real. (Contributed by Mario Carneiro, 28-May-2016.)">nnrpd</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D215EF">113</SPAN></TD><TD><A NAME="40"></A>
+<SPAN CLASS=i>. . . . . 6</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) &isin;
+&#8477;<SUP>+</SUP>)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>41</TD><TD><A HREF="#40">40</A></TD><TD><A
+HREF="rphalfcld.html"
+TITLE="Closure law for half of a positive real. (Contributed by Mario Carneiro, 28-May-2016.)">rphalfcld</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D60DE9">115</SPAN></TD><TD><A NAME="41"></A>
+<SPAN CLASS=i>. . . . 5</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2) &isin;
+&#8477;<SUP>+</SUP>)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>42</TD><TD><A HREF="#41">41</A></TD><TD><A
+HREF="rpgt0d.html"
+TITLE="A positive real is greater than zero. (Contributed by Mario Carneiro, 28-May-2016.)">rpgt0d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D411EC">114</SPAN></TD><TD><A NAME="42"></A>
+<SPAN CLASS=i>. . . 4</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; 0 &lt; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>43</TD><TD>&nbsp;</TD><TD><A HREF="elnnz.html"
+TITLE="Positive integer property expressed in terms of integers. (Contributed by NM,...">elnnz</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#B53FFF">104</SPAN></TD><TD><A NAME="43"></A>
+<SPAN CLASS=i>. . . 4</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(((<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2) &isin; &#8469;
+&harr; (((<SPAN CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2)
+&isin; &#8484; &and; 0 &lt; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2)))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>44</TD><TD><A HREF="#39">39</A>, <A HREF="#42">42</A>, <A
+HREF="#43">43</A></TD><TD><A HREF="sylanbrc.html"
+TITLE="Syllogism inference. (Contributed by Jeff Madsen, 2-Sep-2009.)">sylanbrc</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#957B00">29</SPAN></TD><TD><A NAME="44"></A>
+<SPAN CLASS=i>. . 3</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2) &isin;
+&#8469;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>45</TD><TD>&nbsp;</TD><TD><A HREF="nnesq.html"
+TITLE="A positive integer is even iff its square is even. (Contributed by NM, 20-Aug-2001.)...">nnesq</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E500BC">122</SPAN></TD><TD><A NAME="45"></A>
+<SPAN CLASS=i>. . . 4</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN> &isin; &#8469; &rarr; ((<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN> / 2) &isin; &#8469; &harr;
+((<SPAN CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2) &isin;
+&#8469;))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>46</TD><TD><A HREF="#8">8</A>, <A
+HREF="#45">45</A></TD><TD><A HREF="syl.html"
+TITLE="An inference version of the transitive laws for implication imim2 ~...">syl</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F70A00">5</SPAN></TD><TD><A NAME="46"></A>
+<SPAN CLASS=i>. . 3</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> / 2) &isin; &#8469; &harr; ((<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN>&uarr;2) / 2) &isin;
+&#8469;))</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>47</TD><TD><A HREF="#44">44</A>, <A
+HREF="#46">46</A></TD><TD><A HREF="mpbird.html"
+TITLE="A deduction from a biconditional, related to modus ponens. (Contributed by NM,...">mpbird</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E33D00">13</SPAN></TD><TD><A NAME="47"></A>
+<SPAN CLASS=i>. 2</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D435;</SPAN> / 2) &isin; &#8469;)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>48</TD><TD><A HREF="#29">29</A>, <A
+HREF="#47">47</A></TD><TD><A HREF="jca.html"
+TITLE="Deduce conjunction of the consequents of two implications ('join consequents with...">jca</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#A07600">27</SPAN></TD><TD><A NAME="48"></A>
+<SPAN CLASS=i>1</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=class
+STYLE="color:#C3C">&#x1D434;</SPAN> / 2) &isin; &#8484; &and; (<SPAN
+CLASS=class STYLE="color:#C3C">&#x1D435;</SPAN> / 2) &isin;
+&#8469;))</SPAN></TD></TR>
+</TABLE></CENTER>
+<CENTER><TABLE CELLSPACING=5><TR><TD ALIGN=LEFT><FONT SIZE=-1><B>Colors of
+variables:</B>  <SPAN CLASS=wff STYLE="color:blue;font-style:normal">wff</SPAN>
+<SPAN CLASS=setvar STYLE="color:red;font-style:normal">setvar</SPAN> <SPAN
+CLASS=class STYLE="color:#C3C;font-style:normal">class</SPAN></FONT></TD></TR>
+<TR><TD ALIGN=LEFT><FONT SIZE=-1><B>Syntax hints:</B>  &nbsp;<SPAN CLASS=math>
+&rarr; </SPAN><A HREF="wi.html">wi</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#FA0200">2</SPAN> &nbsp;<SPAN CLASS=math> &harr; </SPAN><A
+HREF="wb.html">wb</A>&nbsp;<SPAN CLASS=r STYLE="color:#EA3100">11</SPAN>
+&nbsp;<SPAN CLASS=math> &and; </SPAN><A HREF="wa.html">wa</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#C06000">21</SPAN> &nbsp;<SPAN CLASS=math> = </SPAN><A
+HREF="wceq.html">wceq</A>&nbsp;<SPAN CLASS=r STYLE="color:#6A8800">38</SPAN>
+&nbsp;<SPAN CLASS=math> &isin; </SPAN><A HREF="wcel.html">wcel</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#648900">39</SPAN> &nbsp;<SPAN CLASS=math> &ne; </SPAN><A
+HREF="wne.html">wne</A>&nbsp;<SPAN CLASS=r STYLE="color:#3E8F00">46</SPAN>
+&nbsp;<i> class class class </i><A HREF="wbr.html">wbr</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#009068">66</SPAN> &nbsp;<SPAN CLASS=math>&lsquo;</SPAN><A
+HREF="cfv.html">cfv</A>&nbsp;<SPAN CLASS=r STYLE="color:#008F7E">69</SPAN>
+&nbsp;(<i>class class class</i>)<A HREF="co.html">co</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#008E86">70</SPAN> &nbsp;<SPAN CLASS=math>0</SPAN><A
+HREF="cc0.html">cc0</A>&nbsp;<SPAN CLASS=r STYLE="color:#0086CC">77</SPAN>
+&nbsp;<SPAN CLASS=math> &middot; </SPAN><A HREF="cmul.html">cmul</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#0182E9">80</SPAN> &nbsp;<SPAN CLASS=math> &lt; </SPAN><A
+HREF="clt.html">clt</A>&nbsp;<SPAN CLASS=r STYLE="color:#0181F1">81</SPAN>
+&nbsp;<SPAN CLASS=math> / </SPAN><A HREF="cdiv.html">cdiv</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#177CFF">84</SPAN> &nbsp;<SPAN CLASS=math>&#8469;</SPAN><A
+HREF="cn.html">cn</A>&nbsp;<SPAN CLASS=r STYLE="color:#5F70FF">90</SPAN>
+&nbsp;<SPAN CLASS=math>2</SPAN><A HREF="c2.html">c2</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#9C56FF">99</SPAN> &nbsp;<SPAN CLASS=math>&#8484;</SPAN><A
+HREF="cz.html">cz</A>&nbsp;<SPAN CLASS=r STYLE="color:#AD48FF">102</SPAN>
+&nbsp;<SPAN CLASS=math>&uarr;</SPAN><A HREF="cexp.html">cexp</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D70AE6">116</SPAN> &nbsp;<SPAN
+CLASS=math>&radic;</SPAN><A HREF="csqrt.html">csqrt</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E900A7">124</SPAN></FONT></TD></TR>
+<TR><TD ALIGN=LEFT><FONT SIZE=-1><B>This theorem is referenced by:</B> &nbsp;<A
+HREF="sqrt2irr.html">sqrt2irr</A>
+&nbsp;<SPAN CLASS=r STYLE="color:#ED008C">127</SPAN></FONT></TD></TR>
+</TABLE></CENTER>
+<TABLE BORDER=0 WIDTH="100%">
+<TR><TD WIDTH="25%">&nbsp;</TD>
+<TD ALIGN=CENTER VALIGN=BOTTOM>
+<FONT SIZE=-2 FACE=sans-serif>
+Copyright terms:
+<A HREF="../copyright.html#pd">Public domain</A>
+</FONT></TD><TD ALIGN=RIGHT VALIGN=BOTTOM WIDTH="25%">
+<FONT SIZE=-2 FACE=sans-serif>
+<A HREF="http://validator.w3.org/check?uri=referer">
+W3C validator</A>
+</FONT></TD></TR></TABLE>
+</BODY></HTML>
