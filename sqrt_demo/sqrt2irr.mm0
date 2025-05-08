@@ -1,0 +1,598 @@
+delimiter $ ( $ $ ) $;
+
+provable sort wff;
+
+--| If ` ph ` is a wff, so is ` -. ph ` or "not ` ph ` ". Part of the recursive definition of a wff (well-formed formula). In classical logic (which is our logic), a wff is interpreted as either true or false. So if ` ph ` is true, then ` -. ph ` is false; if ` ph ` is false, then ` -. ph ` is true. Traditionally, Greek letters are used to represent wffs, and we follow this convention. In propositional calculus, we define only wffs built up from other wffs, i.e. there is no starting or "atomic" wff. Later, in predicate calculus, we will extend the basic wff definition by including atomic wffs ( weq ~ http://us.metamath.org/mpeuni/weq.html and wel ~ http://us.metamath.org/mpeuni/wel.html ).
+term wn (ph: wff): wff;
+
+--| If ` ph ` and ` ps ` are wff's, so is ` ( ph -> ps ) ` or " ` ph ` implies ` ps ` ". Part of the recursive definition of a wff. The resulting wff is (interpreted as) false when ` ph ` is true and ` ps ` is false; it is true otherwise. Think of the truth table for an OR gate with input ` ph ` connected through an inverter. After we state the axioms of propositional calculus ( ax-1 ~ http://us.metamath.org/mpeuni/ax-1.html , ax-2 ~ http://us.metamath.org/mpeuni/ax-2.html , ax-3 ~ http://us.metamath.org/mpeuni/ax-3.html , and ax-mp ~ http://us.metamath.org/mpeuni/ax-mp.html ) and define the biconditional ( df-bi ~ http://us.metamath.org/mpeuni/df-bi.html ), the constant true ` T. ` ( df-tru ~ http://us.metamath.org/mpeuni/df-tru.html ), and the constant false ` F. ` ( df-fal ~ http://us.metamath.org/mpeuni/df-fal.html ), we will be able to prove these truth table values: ` ( ( T. -> T. ) <-> T. ) ` ( truimtru ~ http://us.metamath.org/mpeuni/truimtru.html ), ` ( ( T. -> F. ) <-> F. ) ` ( truimfal ~ http://us.metamath.org/mpeuni/truimfal.html ), ` ( ( F. -> T. ) <-> T. ) ` ( falimtru ~ http://us.metamath.org/mpeuni/falimtru.html ), and ` ( ( F. -> F. ) <-> T. ) ` ( falimfal ~ http://us.metamath.org/mpeuni/falimfal.html ). These have straightforward meanings, for example, ` ( ( T. -> T. ) <-> T. ) ` just means "the value of ` ( T. -> T. ) ` is ` T. ` ". The left-hand wff is called the antecedent, and the right-hand wff is called the consequent. In the case of ` ( ph -> ( ps -> ch ) ) ` , the middle ` ps ` may be informally called either an antecedent or part of the consequent depending on context. Contrast with ` <-> ` ( df-bi ~ http://us.metamath.org/mpeuni/df-bi.html ), ` /\ ` ( df-an ~ http://us.metamath.org/mpeuni/df-an.html ), and ` \/ ` ( df-or ~ http://us.metamath.org/mpeuni/df-or.html ). This is called "material implication" and the arrow is usually read as "implies". However, material implication is not identical to the meaning of "implies" in natural language. For example, the word "implies" may suggest a causal relationship in natural language. Material implication does not require any causal relationship. Also, note that in material implication, if the consequent is true then the wff is always true (even if the antecedent is false). Thus, if "implies" means material implication, it is true that "if the moon is made of green cheese that implies that 5=5" (because 5=5). Similarly, if the antecedent is false, the wff is always true. Thus, it is true that, "if the moon is made of green cheese that implies that 5=7" (because the moon is not actually made of green cheese). A contradiction implies anything ( pm2.21i ~ http://us.metamath.org/mpeuni/pm2.21i.html ). In short, material implication has a very specific technical definition, and misunderstandings of it are sometimes called "paradoxes of logical implication".
+term wi (ph ps: wff): wff;
+
+--| Inference introducing an antecedent. Inference associated with ax-1 ~ http://us.metamath.org/mpeuni/ax-1.html . Its associated inference is a1ii ~ http://us.metamath.org/mpeuni/a1ii.html . See ~ conventions for a definition of "associated inference". (Contributed by NM, 29-Dec-1992.)
+axiom a1i (ph ps: wff):
+  $ ph $ >
+  $ wi ps ph $;
+
+--| A modus ponens deduction. A translation of natural deduction rule ` -> ` E ( ` -> ` elimination), see ~ natded . Deduction form of ax-mp ~ http://us.metamath.org/mpeuni/ax-mp.html . Inference associated with a2i ~ http://us.metamath.org/mpeuni/a2i.html . Commuted form of mpcom ~ http://us.metamath.org/mpeuni/mpcom.html . (Contributed by NM, 29-Dec-1992.)
+axiom mpd (ph ps ch: wff):
+  $ wi ph ps $ >
+  $ wi ph (wi ps ch) $ >
+  $ wi ph ch $;
+
+--| An inference version of the transitive laws for implication imim2 ~ http://us.metamath.org/mpeuni/imim2.html and imim1 ~ http://us.metamath.org/mpeuni/imim1.html (and imim1i ~ http://us.metamath.org/mpeuni/imim1i.html and imim2i ~ http://us.metamath.org/mpeuni/imim2i.html ), which Russell and Whitehead call "the principle of the syllogism ... because ... the syllogism in Barbara is derived from [[ ~ syl ]" (quote after Theorem *2.06 of [WhiteheadRussell] p. 101). Some authors call this law a "hypothetical syllogism". Its associated inference is mp2b ~ http://us.metamath.org/mpeuni/mp2b.html . (A bit of trivia: this is the most commonly referenced assertion in our database (13449 times as of 22-Jul-2021). In second place is eqid ~ http://us.metamath.org/mpeuni/eqid.html (9597 times), followed by adantr ~ http://us.metamath.org/mpeuni/adantr.html (8861 times), syl2anc ~ http://us.metamath.org/mpeuni/syl2anc.html (7421 times), adantl ~ http://us.metamath.org/mpeuni/adantl.html (6403 times), and ~ simpr (5829 times). The Metamath program command 'show usage' shows the number of references.) (Contributed by NM, 30-Sep-1992.) (Proof shortened by Mel L. O'Cat, 20-Oct-2011.) (Proof shortened by Wolf Lammen, 26-Jul-2012.)
+axiom syl (ph ps ch: wff):
+  $ wi ph ps $ >
+  $ wi ps ch $ >
+  $ wi ph ch $;
+
+--| Syllogism deduction. Deduction associated with ~ syl . See ~ conventions for the meaning of "associated deduction" or "deduction form". (Contributed by NM, 5-Aug-1993.) (Proof shortened by Mel L. O'Cat, 19-Feb-2008.) (Proof shortened by Wolf Lammen, 3-Aug-2012.)
+axiom syld (ph ps ch th: wff):
+  $ wi ph (wi ps ch) $ >
+  $ wi ph (wi ch th) $ >
+  $ wi ph (wi ps th) $;
+
+--| A double modus ponens deduction. Deduction associated with mp2 ~ http://us.metamath.org/mpeuni/mp2.html . (Contributed by NM, 23-May-2013.) (Proof shortened by Wolf Lammen, 23-Jul-2013.)
+axiom mp2d (ph ps ch th: wff):
+  $ wi ph ps $ >
+  $ wi ph ch $ >
+  $ wi ph (wi ps (wi ch th)) $ >
+  $ wi ph th $;
+
+--| Deduction embedding an antecedent. (Contributed by Wolf Lammen, 4-Oct-2013.)
+axiom embantd (ph ps ch th: wff):
+  $ wi ph ps $ >
+  $ wi ph (wi ch th) $ >
+  $ wi ph (wi (wi ps ch) th) $;
+
+--| Commutation of antecedents. Swap 1st and 3rd. (Contributed by NM, 25-Apr-1994.) (Proof shortened by Wolf Lammen, 28-Jul-2012.)
+axiom com13 (ph ps ch th: wff):
+  $ wi ph (wi ps (wi ch th)) $ >
+  $ wi ch (wi ps (wi ph th)) $;
+
+--| A contradiction implies anything. Deduction associated with pm2.21 ~ http://us.metamath.org/mpeuni/pm2.21.html . (Contributed by NM, 10-Feb-1996.)
+axiom pm2_21d (ph ps ch: wff):
+  $ wi ph (wn ps) $ >
+  $ wi ph (wi ps ch) $;
+
+--| Extend wff definition to include the biconditional connective.
+term wb (ph ps: wff): wff;
+
+--| A mixed syllogism inference from a nested implication and a biconditional. Useful for substituting an embedded consequent with a definition. (Contributed by NM, 5-Aug-1993.)
+axiom imbitrrdi (ph ps ch th: wff):
+  $ wi ph (wi ps ch) $ >
+  $ wb th ch $ >
+  $ wi ph (wi ps th) $;
+
+--| A deduction from a biconditional, related to modus ponens. (Contributed by NM, 5-Aug-1993.)
+axiom mpbird (ph ps ch: wff):
+  $ wi ph ch $ >
+  $ wi ph (wb ps ch) $ >
+  $ wi ph ps $;
+
+--| A syllogism deduction. (Contributed by NM, 3-Aug-1994.)
+axiom sylibrd (ph ps ch th: wff):
+  $ wi ph (wi ps ch) $ >
+  $ wi ph (wb th ch) $ >
+  $ wi ph (wi ps th) $;
+
+--| An inference from transitive law for logical equivalence. (Contributed by NM, 3-Jan-1993.) (Proof shortened by Wolf Lammen, 13-Oct-2012.)
+axiom bitri (ph ps ch: wff):
+  $ wb ph ps $ >
+  $ wb ps ch $ >
+  $ wb ph ch $;
+
+--| Deduction form of bitr3i ~ http://us.metamath.org/mpeuni/bitr3i.html . (Contributed by NM, 14-May-1993.)
+axiom bitr3d (ph ps ch th: wff):
+  $ wi ph (wb ps ch) $ >
+  $ wi ph (wb ps th) $ >
+  $ wi ph (wb ch th) $;
+
+--| A syllogism inference from two biconditionals. (Contributed by NM, 12-Mar-1993.)
+axiom bitrdi (ph ps ch th: wff):
+  $ wi ph (wb ps ch) $ >
+  $ wb ch th $ >
+  $ wi ph (wb ps th) $;
+
+--| An inference from a biconditional, related to modus tollens. (Contributed by NM, 15-Nov-1994.) (Proof shortened by Wolf Lammen, 14-Oct-2012.)
+axiom mtbir (ph ps: wff):
+  $ wn ps $ >
+  $ wb ph ps $ >
+  $ wn ph $;
+
+--| Deduction adding a consequent to both sides of a logical equivalence. (Contributed by NM, 11-May-1993.) (Proof shortened by Wolf Lammen, 17-Sep-2013.)
+axiom imbi1d (ph ps ch th: wff):
+  $ wi ph (wb ps ch) $ >
+  $ wi ph (wb (wi ps th) (wi ch th)) $;
+
+--| Deduction joining two equivalences to form equivalence of implications. (Contributed by NM, 16-May-1993.)
+axiom imbi12d (ph ps ch th ta: wff):
+  $ wi ph (wb ps ch) $ >
+  $ wi ph (wb th ta) $ >
+  $ wi ph (wb (wi ps th) (wi ch ta)) $;
+
+--| Extend wff definition to include conjunction ("and").
+term wa (ph ps: wff): wff;
+
+--| Exportation inference. (This theorem used to be labeled "exp" but was changed to "ex" so as not to conflict with the math token "exp", per the June 2006 Metamath spec change.) A translation of natural deduction rule ` -> ` I ( ` -> ` introduction), see ~ natded . (Contributed by NM, 3-Jan-1993.) (Proof shortened by Eric Schmidt, 22-Dec-2006.)
+axiom ex (ph ps ch: wff):
+  $ wi (wa ph ps) ch $ >
+  $ wi ph (wi ps ch) $;
+
+--| Inference commuting conjunction in antecedent. (Contributed by NM, 21-Apr-1994.)
+axiom ancoms (ph ps ch: wff):
+  $ wi (wa ph ps) ch $ >
+  $ wi (wa ps ph) ch $;
+
+--| Elimination of a conjunct. Theorem *3.27 (Simp) of [WhiteheadRussell] p. 112. (Contributed by NM, 3-Jan-1993.) (Proof shortened by Wolf Lammen, 14-Jun-2022.)
+axiom simpr (ph ps: wff):
+  $ wi (wa ph ps) ps $;
+
+--| Deduction eliminating a conjunct. A translation of natural deduction rule ` /\ ` EL ( ` /\ ` elimination left), see ~ natded . (Contributed by NM, 26-May-1993.)
+axiom simpld (ph ps ch: wff):
+  $ wi ph (wa ps ch) $ >
+  $ wi ph ps $;
+
+--| Deduction eliminating a conjunct. (Contributed by NM, 14-May-1993.) A translation of natural deduction rule ` /\ ` ER ( ` /\ ` elimination right), see ~ natded . (Proof shortened by Wolf Lammen, 3-Oct-2013.)
+axiom simprd (ph ps ch: wff):
+  $ wi ph (wa ps ch) $ >
+  $ wi ph ch $;
+
+--| Deduce conjunction of the consequents of two implications ("join consequents with 'and'"). Deduction form of pm3.2 ~ http://us.metamath.org/mpeuni/pm3.2.html and pm3.2i ~ http://us.metamath.org/mpeuni/pm3.2i.html . Its associated deduction is jcad ~ http://us.metamath.org/mpeuni/jcad.html . Equivalent to the natural deduction rule ` /\ ` I ( ` /\ ` introduction), see ~ natded . (Contributed by NM, 3-Jan-1993.) (Proof shortened by Wolf Lammen, 25-Oct-2012.)
+axiom jca (ph ps ch: wff):
+  $ wi ph ps $ >
+  $ wi ph ch $ >
+  $ wi ph (wa ps ch) $;
+
+--| Deduction conjoining antecedent to left of consequent in nested implication. (Contributed by NM, 15-Aug-1994.) (Proof shortened by Wolf Lammen, 1-Nov-2012.)
+axiom ancld (ph ps ch: wff):
+  $ wi ph (wi ps ch) $ >
+  $ wi ph (wi ps (wa ps ch)) $;
+
+--| Syllogism inference. (Contributed by Jeff Madsen, 2-Sep-2009.)
+axiom sylanbrc (ph ps ch th: wff):
+  $ wi ph ps $ >
+  $ wi ph ch $ >
+  $ wb th (wa ps ch) $ >
+  $ wi ph th $;
+
+--| A double syllogism inference. For an implication-only version, see syl2im ~ http://us.metamath.org/mpeuni/syl2im.html . (Contributed by NM, 31-Jan-1997.)
+axiom syl2an (ph ps ch th ta: wff):
+  $ wi ph ps $ >
+  $ wi ta ch $ >
+  $ wi (wa ps ch) th $ >
+  $ wi (wa ph ta) th $;
+
+--| Deduction adding two conjuncts to antecedent. (Contributed by NM, 19-Oct-1999.) (Proof shortened by Wolf Lammen, 20-Nov-2012.)
+axiom ad2antrr (ph ps ch th: wff):
+  $ wi ph ps $ >
+  $ wi (wa (wa ph ch) th) ps $;
+
+--| Deduction adding two conjuncts to antecedent. (Contributed by NM, 19-Oct-1999.) (Proof shortened by Wolf Lammen, 20-Nov-2012.)
+axiom ad2antlr (ph ps ch th: wff):
+  $ wi ph ps $ >
+  $ wi (wa (wa ch ph) th) ps $;
+
+--| Simplification of a conjunction. (Contributed by NM, 18-Mar-2007.)
+axiom simpll (ph ps ch: wff):
+  $ wi (wa (wa ph ps) ch) ph $;
+
+--| Simplification of a conjunction. (Contributed by NM, 20-Mar-2007.)
+axiom simplr (ph ps ch: wff):
+  $ wi (wa (wa ph ps) ch) ps $;
+
+--| Extend wff definition to include disjunction ("or").
+term wo (ph ps: wff): wff;
+
+--| Disjunction of antecedents. Compare Theorem *4.77 of [WhiteheadRussell] p. 121. (Contributed by NM, 30-May-1994.) (Proof shortened by Wolf Lammen, 9-Dec-2012.)
+axiom jaob (ph ps ch: wff):
+  $ wb (wi (wo ph ch) ps) (wa (wi ph ps) (wi ch ps)) $;
+
+pure sort setvar;
+
+sort class;
+
+--| This syntax construction states that a variable ` x ` , which has been declared to be a setvar variable by $f statement vx, is also a class expression. This can be justified informally as follows. We know that the class builder ` { y | y e. x } ` is a class by cab ~ http://us.metamath.org/mpeuni/cab.html . Since (when ` y ` is distinct from ` x ` ) we have ` x = { y | y e. x } ` by cvjust ~ http://us.metamath.org/mpeuni/cvjust.html , we can argue that the syntax " ` class x ` " can be viewed as an abbreviation for " ` class { y | y e. x } ` ". See the discussion under the definition of class in [Jech] p. 4 showing that "Every set can be considered to be a class". While it is tempting and perhaps occasionally useful to view ~ cv as a "type conversion" from a setvar variable to a class variable, keep in mind that ~ cv is intrinsically no different from any other class-building syntax such as cab ~ http://us.metamath.org/mpeuni/cab.html , cun ~ http://us.metamath.org/mpeuni/cun.html , or c0 ~ http://us.metamath.org/mpeuni/c0.html . For a general discussion of the theory of classes and the role of ~ cv , see ~ mmset.html#class . (The description above applies to set theory, not predicate calculus. The purpose of introducing ` class x ` here, and not in set theory where it belongs, is to allow to express, i.e., "prove", the weq ~ http://us.metamath.org/mpeuni/weq.html of predicate calculus from the ~ wceq of set theory, so that we do not overload the ` = ` connective with two syntax definitions. This is done to prevent ambiguity that would complicate some Metamath parsers.)
+term cv (x: setvar): class;
+
+--| Extend wff definition to include class equality. For a general discussion of the theory of classes, see ~ mmset.html#class . (The purpose of introducing ` wff A = B ` here, and not in set theory where it belongs, is to allow to express, i.e., "prove", the weq ~ http://us.metamath.org/mpeuni/weq.html of predicate calculus in terms of the ~ wceq of set theory, so that we do not "overload" the ` = ` connective with two syntax definitions. This is done to prevent ambiguity that would complicate some Metamath parsers. For example, some parsers - although not the Metamath program - stumble on the fact that the ` = ` in ` x = y ` could be the ` = ` of either weq ~ http://us.metamath.org/mpeuni/weq.html or ~ wceq , although mathematically it makes no difference. The class variables ` A ` and ` B ` are introduced temporarily for the purpose of this definition but otherwise not used in predicate calculus. See df-cleq ~ http://us.metamath.org/mpeuni/df-cleq.html for more information on the set theory usage of ~ wceq .)
+term wceq (A B: class): wff;
+
+--| Extend wff definition to include the membership connective between classes. For a general discussion of the theory of classes, see ~ mmset.html#class . The purpose of introducing ` wff A e. B ` here is to allow to prove the wel ~ http://us.metamath.org/mpeuni/wel.html of predicate calculus in terms of the ~ wcel of set theory, so that we do not overload the ` e. ` connective with two syntax definitions. This is done to prevent ambiguity that would complicate some Metamath parsers. The class variables ` A ` and ` B ` are introduced temporarily for the purpose of this definition but otherwise not used in predicate calculus. See df-clab ~ http://us.metamath.org/mpeuni/df-clab.html for more information on the set theory usage of ~ wcel .
+term wcel (A1 B1: class): wff;
+
+--| An equality transitivity deduction. (Contributed by NM, 21-Jun-1993.)
+axiom eqtrd (ph: wff) (A2 B2 C: class):
+  $ wi ph (wceq A2 B2) $ >
+  $ wi ph (wceq B2 C) $ >
+  $ wi ph (wceq A2 C) $;
+
+--| An equality transitivity equality deduction. (Contributed by NM, 18-Jul-1995.)
+axiom eqtr3d (ph: wff) (A2 B2 C: class):
+  $ wi ph (wceq A2 B2) $ >
+  $ wi ph (wceq A2 C) $ >
+  $ wi ph (wceq B2 C) $;
+
+--| An equality transitivity equality deduction. (Contributed by NM, 18-Jul-1995.)
+axiom eqtr4d (ph: wff) (A2 B2 C: class):
+  $ wi ph (wceq A2 B2) $ >
+  $ wi ph (wceq C B2) $ >
+  $ wi ph (wceq A2 C) $;
+
+--| A deduction from three chained equalities. (Contributed by NM, 4-Aug-1995.) (Proof shortened by Andrew Salmon, 25-May-2011.)
+axiom _3eqtr4d (ph: wff) (A2 B2 C D: class):
+  $ wi ph (wceq A2 B2) $ >
+  $ wi ph (wceq C A2) $ >
+  $ wi ph (wceq D B2) $ >
+  $ wi ph (wceq C D) $;
+
+--| Substitution of equal classes into membership relation, deduction form. (Contributed by Raph Levien, 10-Dec-2002.)
+axiom eqeltrd (ph: wff) (A2 B2 C: class):
+  $ wi ph (wceq A2 B2) $ >
+  $ wi ph (wcel B2 C) $ >
+  $ wi ph (wcel A2 C) $;
+
+--| Deduction that substitutes equal classes into membership. (Contributed by NM, 14-Dec-2004.)
+axiom eqeltrrd (ph: wff) (A2 B2 C: class):
+  $ wi ph (wceq A2 B2) $ >
+  $ wi ph (wcel A2 C) $ >
+  $ wi ph (wcel B2 C) $;
+
+--| Extend wff notation to include inequality.
+term wne (A2 B2: class): wff;
+
+--| Define inequality. (Contributed by NM, 26-May-1993.)
+axiom df_ne (A2 B2: class):
+  $ wb (wne A2 B2) (wn (wceq A2 B2)) $;
+
+--| Contrapositive inference for inequality. (Contributed by NM, 19-Apr-2007.) (Proof shortened by Andrew Salmon, 25-May-2011.) (Proof shortened by Wolf Lammen, 23-Nov-2019.)
+axiom necon2ad (ph ps: wff) (A2 B2: class):
+  $ wi ph (wi (wceq A2 B2) (wn ps)) $ >
+  $ wi ph (wi ps (wne A2 B2)) $;
+
+--| Contrapositive inference for inequality. (Contributed by NM, 13-Apr-2007.)
+axiom necon2bd (ph ps: wff) (A2 B2: class):
+  $ wi ph (wi ps (wne A2 B2)) $ >
+  $ wi ph (wi (wceq A2 B2) (wn ps)) $;
+
+--| Deduction for inequality. (Contributed by NM, 25-Oct-1999.) (Proof shortened by Wolf Lammen, 19-Nov-2019.)
+axiom neeq2d (ph: wff) (A2 B2 C: class):
+  $ wi ph (wceq A2 B2) $ >
+  $ wi ph (wb (wne C A2) (wne C B2)) $;
+
+--| Extend wff notation to include negated membership.
+term wnel (A2 B2: class): wff;
+
+--| Inference associated with ~ df-nel . (Contributed by BJ, 7-Jul-2018.)
+axiom nelir (A2 B2: class):
+  $ wn (wcel A2 B2) $ >
+  $ wnel A2 B2 $;
+
+--| Extend wff notation to include restricted universal quantification.
+term wral {x1: setvar} (ph: wff x1) (A2: class x1): wff;
+
+--| Generalization rule for restricted quantification. (Contributed by NM, 19-Nov-1994.)
+axiom rgen {x1: setvar} (ph: wff x1) (A2: class x1):
+  $ wi (wcel (cv x1) A2) ph $ >
+  $ wral x1 ph A2 $;
+
+--| Extend wff notation to include restricted existential quantification.
+term wrex {x1: setvar} (ph: wff x1) (A2: class x1): wff;
+
+--| Relationship between restricted universal and existential quantifiers. (Contributed by NM, 21-Jan-1997.) (Proof shortened by BJ, 16-Jul-2021.)
+axiom ralnex {x1: setvar} (ph: wff x1) (A2: class x1):
+  $ wb (wral x1 (wn ph) A2) (wn (wrex x1 ph A2)) $;
+
+--| Inference adding restricted existential quantifier to negated wff. (Contributed by NM, 16-Oct-2003.)
+axiom nrex {x1: setvar} (ps: wff x1) (A2: class x1):
+  $ wi (wcel (cv x1) A2) (wn ps) $ >
+  $ wn (wrex x1 ps A2) $;
+
+--| Restricted quantifier version of ~ 19.26 . (Contributed by NM, 28-Jan-1997.) (Proof shortened by Andrew Salmon, 30-May-2011.)
+axiom r19_26 {x1: setvar} (ph ps: wff x1) (A2: class x1):
+  $ wb (wral x1 (wa ph ps) A2) (wa (wral x1 ph A2) (wral x1 ps A2)) $;
+
+--| Inference from Theorem 19.21 of [Margaris] p. 90. (Restricted quantifier version.) (Contributed by NM, 2-Feb-2008.) (Proof shortened by Wolf Lammen, 28-Dec-2019.)
+axiom ralrimdva {x1: setvar} (ph ps: wff) (ch: wff x1) (A2: class x1):
+  $ wi (wa ph (wcel (cv x1) A2)) (wi ps ch) $ >
+  $ wi ph (wi ps (wral x1 ch A2)) $;
+
+--| Formula-building rule for restricted universal quantifier (deduction form). (Contributed by NM, 4-Mar-1997.) Reduce dependencies on axioms. (Revised by Wolf Lammen, 29-Dec-2019.)
+axiom ralbidva {x1: setvar} (ph: wff) (ps ch: wff x1) (A2: class x1):
+  $ wi (wa ph (wcel (cv x1) A2)) (wb ps ch) $ >
+  $ wi ph (wb (wral x1 ps A2) (wral x1 ch A2)) $;
+
+--| Formula-building rule for restricted universal quantifier (deduction form). (Contributed by NM, 20-Nov-1994.) Reduce dependencies on axioms. (Revised by Wolf Lammen, 5-Dec-2019.)
+axiom ralbidv {x1: setvar} (ph: wff) (ps ch: wff x1) (A2: class x1):
+  $ wi ph (wb ps ch) $ >
+  $ wi ph (wb (wral x1 ps A2) (wral x1 ch A2)) $;
+
+--| Change the bound variable of a restricted universal quantifier using implicit substitution. Version of ~ cbvralv with a disjoint variable condition, which does not require ~ ax-10 , ~ ax-11 , ~ ax-12 , ~ ax-13 . (Contributed by NM, 28-Jan-1997.) Avoid ~ ax-13 . (Revised by Gino Giotto, 10-Jan-2024.)
+axiom cbvralvw {x1 y: setvar} (ph: wff x1) (ps: wff y) (A2: class):
+  $ wi (wceq (cv x1) (cv y)) (wb ph ps) $ >
+  $ wb (wral x1 ph A2) (wral y ps A2) $;
+
+--| Commutation of restricted existential quantifiers. (Contributed by NM, 19-Nov-1995.) (Revised by Mario Carneiro, 14-Oct-2016.) (Proof shortened by BJ, 26-Aug-2023.) (Proof shortened by Wolf Lammen, 8-Dec-2024.)
+axiom rexcom {x1 y: setvar} (ph: wff x1 y) (A2: class x1) (B2: class y):
+  $ wb (wrex x1 (wrex y ph B2) A2) (wrex y (wrex x1 ph A2) B2) $;
+
+--| Restricted quantifier version of ~ ceqsalv . (Contributed by NM, 21-Jun-2013.) Avoid ~ ax-9 , ~ ax-12 , ~ ax-ext . (Revised by SN, 8-Sep-2024.)
+axiom ceqsralv {x1: setvar} (ph: wff x1) (ps: wff) (A2 B2: class):
+  $ wi (wceq (cv x1) A2) (wb ph ps) $ >
+  $ wi (wcel A2 B2) (wb (wral x1 (wi (wceq (cv x1) A2) ph) B2) ps) $;
+
+--| Restricted specialization, using implicit substitution. (Contributed by NM, 26-May-1998.) Drop ~ ax-10 , ~ ax-11 , ~ ax-12 . (Revised by SN, 12-Dec-2023.)
+axiom rspcv {x1: setvar} (ph: wff x1) (ps: wff) (A2 B2: class):
+  $ wi (wceq (cv x1) A2) (wb ph ps) $ >
+  $ wi (wcel A2 B2) (wi (wral x1 ph B2) ps) $;
+
+--| Extend wff notation to include the general binary relation predicate. Note that the syntax is simply three class symbols in a row. Since binary relations are the only possible wff expressions consisting of three class expressions in a row, the syntax is unambiguous. (For an example of how syntax could become ambiguous if we are not careful, see the comment in ~ cneg .)
+term wbr (A2 B2 R: class): wff;
+
+--| Equality theorem for a binary relation. (Contributed by NM, 31-Dec-1993.)
+axiom breq1 (A2 B2 C R: class):
+  $ wi (wceq A2 B2) (wb (wbr A2 C R) (wbr B2 C R)) $;
+
+--| Equality theorem for a binary relation. (Contributed by NM, 31-Dec-1993.)
+axiom breq2 (A2 B2 C R: class):
+  $ wi (wceq A2 B2) (wb (wbr C A2 R) (wbr C B2 R)) $;
+
+--| Extend the definition of a class to include the value of a function. Read: "the value of ` F ` at ` A ` ", or " ` F ` of ` A ` ".
+term cfv (A2 F: class): class;
+
+--| Extend class notation to include the value of an operation ` F ` (such as ` + ` ) for two arguments ` A ` and ` B ` . Note that the syntax is simply three class symbols in a row surrounded by parentheses. Since operation values are the only possible class expressions consisting of three class expressions in a row surrounded by parentheses, the syntax is unambiguous. (For an example of how syntax could become ambiguous if we are not careful, see the comment in ~ cneg .)
+term co (A2 B2 F: class): class;
+
+--| Equality theorem for operation value. (Contributed by NM, 28-Feb-1995.)
+axiom oveq1 (A2 B2 C F: class):
+  $ wi (wceq A2 B2) (wceq (co A2 C F) (co B2 C F)) $;
+
+--| Equality theorem for operation value. (Contributed by NM, 28-Feb-1995.)
+axiom oveq2 (A2 B2 C F: class):
+  $ wi (wceq A2 B2) (wceq (co C A2 F) (co C B2 F)) $;
+
+--| Equality deduction for operation value. (Contributed by NM, 13-Mar-1995.)
+axiom oveq1d (ph: wff) (A2 B2 C F: class):
+  $ wi ph (wceq A2 B2) $ >
+  $ wi ph (wceq (co A2 C F) (co B2 C F)) $;
+
+--| Equality deduction for operation value. (Contributed by NM, 13-Mar-1995.)
+axiom oveq2d (ph: wff) (A2 B2 C F: class):
+  $ wi ph (wceq A2 B2) $ >
+  $ wi ph (wceq (co C A2 F) (co C B2 F)) $;
+
+--| Class of complex numbers.
+term cc: class;
+
+--| Class of real numbers.
+term cr: class;
+
+--| Extend class notation to include the complex number 0.
+term cc0: class;
+
+--| Extend class notation to include the complex number 1.
+term c1: class;
+
+--| Addition on complex numbers.
+term caddc: class;
+
+--| Multiplication on complex numbers. The token ` x. ` is a center dot.
+term cmul: class;
+
+--| 'Less than' predicate (extended to include the extended reals).
+term clt: class;
+
+--| Extend wff notation to include the 'less than or equal to' relation.
+term cle: class;
+
+--| 'Less than or equal to' expressed in terms of 'less than' or 'equals'. (Contributed by NM, 13-May-1999.)
+axiom leloe (A2 B2: class):
+  $ wi (wa (wcel A2 cr) (wcel B2 cr)) (wb (wbr A2 B2 cle) (wo (wbr A2 B2 clt) (wceq A2 B2))) $;
+
+--| Extend class notation to include division.
+term cdiv: class;
+
+--| A cancellation law for division. (Contributed by Mario Carneiro, 27-May-2016.)
+axiom divcan1d (ph: wff) (A2 B2: class):
+  $ wi ph (wcel A2 cc) $ >
+  $ wi ph (wcel B2 cc) $ >
+  $ wi ph (wne B2 cc0) $ >
+  $ wi ph (wceq (co (co A2 B2 cdiv) B2 cmul) A2) $;
+
+--| A cancellation law for division. (Contributed by Mario Carneiro, 27-May-2016.)
+axiom divcan3d (ph: wff) (A2 B2: class):
+  $ wi ph (wcel A2 cc) $ >
+  $ wi ph (wcel B2 cc) $ >
+  $ wi ph (wne B2 cc0) $ >
+  $ wi ph (wceq (co (co B2 A2 cmul) B2 cdiv) A2) $;
+
+--| Cancel equal divisors in a division. (Contributed by Mario Carneiro, 27-May-2016.)
+axiom divcan7d (ph: wff) (A2 B2 C: class):
+  $ wi ph (wcel A2 cc) $ >
+  $ wi ph (wcel B2 cc) $ >
+  $ wi ph (wcel C cc) $ >
+  $ wi ph (wne B2 cc0) $ >
+  $ wi ph (wne C cc0) $ >
+  $ wi ph (wceq (co (co A2 C cdiv) (co B2 C cdiv) cdiv) (co A2 B2 cdiv)) $;
+
+--| Division into a fraction. (Contributed by Mario Carneiro, 27-May-2016.)
+axiom divdiv1d (ph: wff) (A2 B2 C: class):
+  $ wi ph (wcel A2 cc) $ >
+  $ wi ph (wcel B2 cc) $ >
+  $ wi ph (wcel C cc) $ >
+  $ wi ph (wne B2 cc0) $ >
+  $ wi ph (wne C cc0) $ >
+  $ wi ph (wceq (co (co A2 B2 cdiv) C cdiv) (co A2 (co B2 C cmul) cdiv)) $;
+
+--| A number is less than itself plus 1. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom ltp1d (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cr) $ >
+  $ wi ph (wbr A2 (co A2 c1 caddc) clt) $;
+
+--| Extend class notation to include the class of positive integers.
+term cn: class;
+
+--| A positive integer is a real number. (Contributed by NM, 18-Aug-1999.)
+axiom nnre (A2: class):
+  $ wi (wcel A2 cn) (wcel A2 cr) $;
+
+--| A positive integer is a complex number. (Contributed by NM, 18-Aug-1999.)
+axiom nncn (A2: class):
+  $ wi (wcel A2 cn) (wcel A2 cc) $;
+
+--| Peano postulate: a successor of a positive integer is a positive integer. (Contributed by NM, 11-Jan-1997.) (Revised by Mario Carneiro, 17-Nov-2014.)
+axiom peano2nn (A2: class):
+  $ wi (wcel A2 cn) (wcel (co A2 c1 caddc) cn) $;
+
+--| A positive integer is a complex number. (Contributed by Mario Carneiro, 27-May-2016.)
+axiom nncnd (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cn) $ >
+  $ wi ph (wcel A2 cc) $;
+
+--| Principle of Mathematical Induction (inference schema). The first four hypotheses give us the substitution instances we need; the last two are the basis and the induction step. See ~ nnaddcl for an example of its use. See ~ nn0ind for induction on nonnegative integers and ~ uzind , ~ uzind4 for induction on an arbitrary upper set of integers. See ~ indstr for strong induction. See also ~ nnindALT . This is an alternative for Metamath 100 proof #74. (Contributed by NM, 10-Jan-1997.) (Revised by Mario Carneiro, 16-Jun-2013.)
+axiom nnind {x1 y: setvar} (ph: wff x1) (ps ch th ta: wff y) (A2: class y):
+  $ wi (wceq (cv x1) c1) (wb ph ps) $ >
+  $ wi (wceq (cv x1) (cv y)) (wb ph ch) $ >
+  $ wi (wceq (cv x1) (co (cv y) c1 caddc)) (wb ph th) $ >
+  $ wi (wceq (cv x1) A2) (wb ph ta) $ >
+  $ ps $ >
+  $ wi (wcel (cv y) cn) (wi ch th) $ >
+  $ wi (wcel A2 cn) ta $;
+
+--| A positive integer is not less than one. (Contributed by NM, 18-Jan-2004.) (Revised by Mario Carneiro, 27-May-2016.)
+axiom nnnlt1 (A2: class):
+  $ wi (wcel A2 cn) (wn (wbr A2 c1 clt)) $;
+
+--| A positive integer is nonzero. See ~ nnne0ALT for a shorter proof using ~ ax-pre-mulgt0 . This proof avoids ~ 0lt1 , and thus ~ ax-pre-mulgt0 , by splitting ~ ax-1ne0 into the two separate cases ` 0 < 1 ` and ` 1 < 0 ` . (Contributed by NM, 27-Sep-1999.) Remove dependency on ~ ax-pre-mulgt0 . (Revised by Steven Nguyen, 30-Jan-2023.)
+axiom nnne0 (A2: class):
+  $ wi (wcel A2 cn) (wne A2 cc0) $;
+
+--| A positive integer is nonzero. (Contributed by Mario Carneiro, 27-May-2016.)
+axiom nnne0d (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cn) $ >
+  $ wi ph (wne A2 cc0) $;
+
+--| Extend class notation to include the number 2.
+term c2: class;
+
+--| The number 2 is a complex number, deduction form. (Contributed by David A. Wheeler, 8-Dec-2018.)
+axiom _2cnd (ph: wff):
+  $ wi ph (wcel c2 cc) $;
+
+--| The number 2 is nonzero. (Contributed by NM, 9-Nov-2007.)
+axiom _2ne0:
+  $ wne c2 cc0 $;
+
+--| Extend class notation to include the class of integers.
+term cz: class;
+
+--| An integer is a complex number. (Contributed by NM, 9-May-2004.)
+axiom zcn (N: class):
+  $ wi (wcel N cz) (wcel N cc) $;
+
+--| Positive integer property expressed in terms of integers. (Contributed by NM, 8-Jan-2002.)
+axiom elnnz (N: class):
+  $ wb (wcel N cn) (wa (wcel N cz) (wbr cc0 N clt)) $;
+
+--| A positive integer is an integer. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom nnzd (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cn) $ >
+  $ wi ph (wcel A2 cz) $;
+
+--| Positive integer ordering relation. (Contributed by NM, 13-Aug-2001.) (Proof shortened by Mario Carneiro, 16-May-2014.)
+axiom nnleltp1 (A2 B2: class):
+  $ wi (wa (wcel A2 cn) (wcel B2 cn)) (wb (wbr A2 B2 cle) (wbr A2 (co B2 c1 caddc) clt)) $;
+
+--| An integer is a complex number. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom zcnd (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cz) $ >
+  $ wi ph (wcel A2 cc) $;
+
+--| Extend class notation to include the class of rationals.
+term cq: class;
+
+--| Membership in the set of rationals. (Contributed by NM, 8-Jan-2002.) (Revised by Mario Carneiro, 28-Jan-2014.)
+axiom elq {x1 y: setvar} (A2: class):
+  $ wb (wcel A2 cq) (wrex x1 (wrex y (wceq A2 (co (cv x1) (cv y) cdiv)) cn) cz) $;
+
+--| Extend class notation to include the class of positive reals.
+term crp: class;
+
+--| A positive integer is a positive real. (Contributed by NM, 28-Nov-2008.)
+axiom nnrp (A2: class):
+  $ wi (wcel A2 cn) (wcel A2 crp) $;
+
+--| Half of a positive real is less than the original number. (Contributed by Mario Carneiro, 21-May-2014.)
+axiom rphalflt (A2: class):
+  $ wi (wcel A2 crp) (wbr (co A2 c2 cdiv) A2 clt) $;
+
+--| A positive integer is a positive real. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom nnrpd (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cn) $ >
+  $ wi ph (wcel A2 crp) $;
+
+--| A positive real is greater than zero. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom rpgt0d (ph: wff) (A2: class):
+  $ wi ph (wcel A2 crp) $ >
+  $ wi ph (wbr cc0 A2 clt) $;
+
+--| Closure law for half of a positive real. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom rphalfcld (ph: wff) (A2: class):
+  $ wi ph (wcel A2 crp) $ >
+  $ wi ph (wcel (co A2 c2 cdiv) crp) $;
+
+--| Extend class notation to include exponentiation of a complex number to an integer power.
+term cexp: class;
+
+--| Integers are closed under squaring. (Contributed by Scott Fenton, 18-Apr-2014.) (Revised by Mario Carneiro, 19-Apr-2014.)
+axiom zsqcl (A2: class):
+  $ wi (wcel A2 cz) (wcel (co A2 c2 cexp) cz) $;
+
+--| Value of square. Inference version. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom sqvald (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cc) $ >
+  $ wi ph (wceq (co A2 c2 cexp) (co A2 A2 cmul)) $;
+
+--| Closure of square. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom sqcld (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cc) $ >
+  $ wi ph (wcel (co A2 c2 cexp) cc) $;
+
+--| Distribution of squaring over division. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom sqdivd (ph: wff) (A2 B2: class):
+  $ wi ph (wcel A2 cc) $ >
+  $ wi ph (wcel B2 cc) $ >
+  $ wi ph (wne B2 cc0) $ >
+  $ wi ph (wceq (co (co A2 B2 cdiv) c2 cexp) (co (co A2 c2 cexp) (co B2 c2 cexp) cdiv)) $;
+
+--| An integer is even iff its square is even. (Contributed by Mario Carneiro, 12-Sep-2015.)
+axiom zesq (N: class):
+  $ wi (wcel N cz) (wb (wcel (co N c2 cdiv) cz) (wcel (co (co N c2 cexp) c2 cdiv) cz)) $;
+
+--| A positive integer is even iff its square is even. (Contributed by NM, 20-Aug-2001.) (Revised by Mario Carneiro, 12-Sep-2015.)
+axiom nnesq (N: class):
+  $ wi (wcel N cn) (wb (wcel (co N c2 cdiv) cn) (wcel (co (co N c2 cexp) c2 cdiv) cn)) $;
+
+--| The naturals are closed under squaring. (Contributed by Mario Carneiro, 28-May-2016.)
+axiom nnsqcld (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cn) $ >
+  $ wi ph (wcel (co A2 c2 cexp) cn) $;
+
+--| Extend class notation to include square root of a complex number.
+term csqrt: class;
+
+--| Square root theorem. Theorem I.35 of [Apostol] p. 29. (Contributed by Mario Carneiro, 29-May-2016.)
+axiom sqsqrtd (ph: wff) (A2: class):
+  $ wi ph (wcel A2 cc) $ >
+  $ wi ph (wceq (co (cfv A2 csqrt) c2 cexp) A2) $;
+
+--| Lemma for ~ sqrt2irr . This is the core of the proof: if ` A / B = sqrt ( 2 ) ` , then ` A ` and ` B ` are even, so ` A / 2 ` and ` B / 2 ` are smaller representatives, which is absurd by the method of infinite descent (here implemented by strong induction). This is Metamath 100 proof #1. (Contributed by NM, 20-Aug-2001.) (Revised by Mario Carneiro, 12-Sep-2015.) (Proof shortened by JV, 4-Jan-2022.)
+theorem sqrt2irrlem (ph: wff) (A2 B2: class):
+  $ wi ph (wcel A2 cz) $ >
+  $ wi ph (wcel B2 cn) $ >
+  $ wi ph (wceq (cfv c2 csqrt) (co A2 B2 cdiv)) $ >
+  $ wi ph (wa (wcel (co A2 c2 cdiv) cz) (wcel (co B2 c2 cdiv) cn)) $;
+
+--| The square root of 2 is irrational. See ~ zsqrtelqelz for a generalization to all non-square integers. The proof's core is proven in ~ sqrt2irrlem , which shows that if ` A / B = sqrt ( 2 ) ` , then ` A ` and ` B ` are even, so ` A / 2 ` and ` B / 2 ` are smaller representatives, which is absurd. An older version of this proof was included in _The Seventeen Provers of the World_ compiled by Freek Wiedijk. It is also the first of the "top 100" mathematical theorems whose formalization is tracked by Freek Wiedijk on his _Formalizing 100 Theorems_ page at ~ http://www.cs.ru.nl/~~freek/100/ . (Contributed by NM, 8-Jan-2002.) (Proof shortened by Mario Carneiro, 12-Sep-2015.)
+theorem sqrt2irr:
+  $ wnel (cfv c2 csqrt) cq $;
+
